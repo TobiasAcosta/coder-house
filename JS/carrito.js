@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // let total =  carrito.reduce((acum, i) => acum + i.precio, 0);
-// let totalIva = (total / 100) * 21 + total; //iva 21%
+
 
 let carrito = JSON.parse(sessionStorage.getItem('carrito'));
 const listaCarrito = document.getElementById('items');
@@ -104,6 +104,9 @@ const mostrarFooter = () => {
             <td>${generarTotales().cantidadTotal}</td>
             <td></td>
             <td>$${generarTotales().costoTotal}</td>
+            <td></td>
+            <td>$${generarTotales().totalIva}</td>
+
         `
         footCarrito.append(footer);
     }else {
@@ -114,10 +117,12 @@ const mostrarFooter = () => {
 const generarTotales = () => {
     const costoTotal = carrito.reduce((acum, {precio}) => acum + precio,0);
     const cantidadTotal = carrito.reduce((acum, {cantidad}) => acum + cantidad,0);
+    const totalIva = (costoTotal / 100) * 21 + costoTotal; //iva 21%
 
     return{
         costoTotal: costoTotal,
-        cantidadTotal: cantidadTotal
+        cantidadTotal: cantidadTotal,
+        totalIva: totalIva
     }
     
 }
