@@ -1,0 +1,14 @@
+#carrito {
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 30%;
+    height: auto;
+    z-index: 1001;
+    background-color: whitesmoke;
+}
+#fotoProductoCarrito {
+    width: 40%;
+    height: 30%;
+}
