@@ -17,7 +17,7 @@ export const productos = [
       id: 3,
       nombre: "Auriculares gamer",
       precio: 50.000,
-      image:"https://th.bing.com/th/id/OIP.2IRz7IGX9pv15KQjbf95mgHaHa?w=219&h=219&c=7&r=0&o=5&pid=1.7",
+      image:"https://th.bing.com/th/id/OIP.uhTlKrXJ9jEY3QULcQhXTAHaHU?w=208&h=206&c=7&r=0&o=5&pid=1.7",
       categoria:"perisfericos"
     },
     {

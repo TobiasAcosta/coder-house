@@ -12,3 +12,6 @@
     width: 40%;
     height: 30%;
 }
+#btnCarrito {
+    cursor: pointer;
+}

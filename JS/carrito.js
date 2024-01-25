@@ -52,7 +52,13 @@ if(productoCarrito == undefined){
         sessionStorage.setItem('carrito', JSON.stringify(carrito));// se sube al carrito
     }
     carrito = JSON.parse(sessionStorage.getItem('carrito')); //actualiza
-    alert(`!Usted compro el producto ${nombre} con exito¡`);
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: `${nombre} se agrego al carrito con exito`,
+        showConfirmButton: false,
+        timer: 1000
+      });
 }
 
 const mostrarCarrito = () => {
@@ -69,8 +75,8 @@ const mostrarCarrito = () => {
         </th>
         <td>${nombre}</td>        
         <td>${cantidad}</td>        
-        <td>${precio/cantidad}</td>        
-        <td>${precio}</td>        
+        <td>$${precio/cantidad}</td>        
+        <td>$${precio}</td>        
         <td>
             <button id="+${id}" class = "btn btn-success">+</button>
             <button id="-${id}" class="btn btn-danger">-</button>
@@ -97,7 +103,7 @@ const mostrarFooter = () => {
             <td></td>
             <td>${generarTotales().cantidadTotal}</td>
             <td></td>
-            <td>${generarTotales().costoTotal}</td>
+            <td>$${generarTotales().costoTotal}</td>
         `
         footCarrito.append(footer);
     }else {
