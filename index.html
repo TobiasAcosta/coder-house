@@ -34,10 +34,10 @@
                   Nombre
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Perifericos</a></li>
-                  <li><a class="dropdown-item" href="#">Componentes</a></li>
-                  <li><a class="dropdown-item" href="#">Monitores</a></li>
-                  <li><a class="dropdown-item" href="#">Sillas Gamer</a></li>
+                  <li><a id="perifericos" class="dropdown-item" href="#">Perifericos</a></li>
+                  <li><a id="componentes" class="dropdown-item" href="#">Componentes</a></li>
+                  <li><a id="monitores" class="dropdown-item" href="#">Monitores</a></li>
+                  <li><a id="sillas" class="dropdown-item" href="#">Sillas Gamer</a></li>
                 </ul>
               </li>
               
@@ -45,16 +45,17 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categoria
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Perifericos</a></li>
-                  <li><a class="dropdown-item" href="#">Accesorios</a></li>
-                  <li><a class="dropdown-item" href="#">Componentes</a></li>
+                <ul id="filter__list" class="dropdown-menu">
+                  <li><a id="cat__perifericos" class="dropdown-item" href="#">Perifericos</a></li>
+                  <li><a id="cat__sillas" class="dropdown-item" href="#">Sillas</a></li>
+                  <li><a id="cat__componentes" class="dropdown-item" href="#">Componentes</a></li>
+                  <li><a id="cat__todos" class="dropdown-item" href="#">Todos</a></li>
                 </ul>
               </li>
             </ul>
           </div>
             <form class="d-flex " role="search">
-              <input class="form-control me-2 filter__input" type="search" placeholder="Search" aria-label="Search">
+              <input id="search" class="form-control me-2 filter__input " type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
