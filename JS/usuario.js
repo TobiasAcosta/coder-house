@@ -27,7 +27,12 @@ const validarLogin = (user, pass) => {
     const validacionUser = usuarios.find((usuario) => usuario.user === user);
 
     if(validacionUser === undefined || validacionUser.pass !== pass){
-        alert('Usuario o contraseña incorrecta');
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Usuario o contraseña incorrecta!!",
+            footer: '<a href="#">Intentalo de nuevo</a>'
+          });
     }else {
         alert(`Bienvenido ${user}`);
 
